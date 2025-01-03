@@ -10,6 +10,41 @@
 //namespaces
 using namespace std;
 
+//struct that has data that will be stored about a product
+struct Product
+{
+    string brand, type, use, store;
+    float price;
+};
+
+//function to insert a new product
+void newProduct()
+{
+    // using the struct to collect the information about the new product
+    Product p;
+
+    cout << "Enter the details for this new product:" << endl;
+
+    cout << "What is the brand of the new product: ";
+    cin.ignore();
+    getline(cin, p.brand);
+
+    cout << "What type of product is this (cleanser, toner, serum, cream): ";
+    cin.ignore();
+    getline(cin, p.type);
+
+    cout << "What is the use of this product: ";
+    cin.ignore();
+    getline(cin, p.use);
+
+    cout << "Where can you buy this product: ";
+    cin.ignore();
+    getline(cin, p.store);
+
+    cout << "How much does this product cost: ";
+    cin >> p.price;
+}
+
 //main 
 int main ()
 {
@@ -42,7 +77,7 @@ int main ()
         switch(choice)
         {
             case 1:
-                cout << "choice 1";
+                newProduct();
 
                 break;
             
@@ -57,7 +92,7 @@ int main ()
                 break;
 
             case 4:
-                cout << "Goodbye";
+                cout << "Goodbye" << endl;
 
                 break;
         }
