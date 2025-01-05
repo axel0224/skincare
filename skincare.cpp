@@ -64,7 +64,7 @@ int main ()
         cout << "1. Enter in a new product" << endl;
         cout << "2. View all products" << endl;
         cout << "3. Review a product" << endl;
-        cout << "4. View current Skincare routing" << endl;
+        cout << "4. View current Skincare routine" << endl;
         cout << "5. Exit" << endl;
         cout << "Enter your selection: ";
         cin >> choice;
@@ -81,18 +81,12 @@ int main ()
         switch(choice)
         {
             case 1:
-                newProduct();
-
-                
-                
                 list->addProduct();
                 
-
-
                 break;
             
             case 2:
-                cout << "choice 2";
+                list->printList();        
 
                 break;
 
@@ -110,7 +104,7 @@ int main ()
 
                 break;
         }
-    }while(choice != 4);
+    }while(choice != 5);
 
     return 0;
 }
