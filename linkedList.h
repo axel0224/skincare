@@ -25,8 +25,9 @@ class linkedList {
     public:
         linkedList();
         Product addProduct();
-        Product removeProduct(Product p);
         void printList();
+        Product removeProduct(Product p);
+        
 
         ~linkedList();
 };
