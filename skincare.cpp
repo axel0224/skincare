@@ -52,6 +52,7 @@ int main ()
 {
     // Variable declaration
     int choice;
+    linkedList *list = new linkedList();
 
     // Title display plus menu
     cout << "Skincare app" << endl;
@@ -69,10 +70,10 @@ int main ()
         cin >> choice;
 
         // Input validation
-        while(choice < 1 || choice > 4)
+        while(choice < 1 || choice > 5)
         {
             cout << "Invalid Input" << endl;
-            cout << "Enter a number 1-4 from the menu: " << endl;
+            cout << "Enter a number 1-5 from the menu: " << endl;
             cin >> choice;
         }
 
@@ -83,7 +84,7 @@ int main ()
                 newProduct();
 
                 
-                linkedList *list = new linkedList();
+                
                 list->addProduct();
                 
 
@@ -101,6 +102,10 @@ int main ()
                 break;
 
             case 4:
+                cout << "choice 4" << endl;
+
+                break;
+            case 5:
                 cout << "Goodbye" << endl;
 
                 break;
