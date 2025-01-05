@@ -6,6 +6,8 @@
 */
 //includes
 #include <iostream>
+#include <string>
+#include "linkedList.h"
 
 //namespaces
 using namespace std;
@@ -20,29 +22,29 @@ struct Product
 //function to insert a new product
 void newProduct()
 {
-    // using the struct to collect the information about the new product
-    Product p;
+    // // using the struct to collect the information about the new product
+    // Product p;
 
-    cout << "Enter the details for this new product:" << endl;
+    // cout << "Enter the details for this new product:" << endl;
 
-    cout << "What is the brand of the new product: ";
-    cin.ignore();
-    getline(cin, p.brand);
+    // cout << "What is the brand of the new product: ";
+    // cin.ignore();
+    // getline(cin, p.brand);
 
-    cout << "What type of product is this (cleanser, toner, serum, cream): ";
-    cin.ignore();
-    getline(cin, p.type);
+    // cout << "What type of product is this (cleanser, toner, serum, cream): ";
+    // cin.ignore();
+    // getline(cin, p.type);
 
-    cout << "What is the use of this product: ";
-    cin.ignore();
-    getline(cin, p.use);
+    // cout << "What is the use of this product: ";
+    // cin.ignore();
+    // getline(cin, p.use);
 
-    cout << "Where can you buy this product: ";
-    cin.ignore();
-    getline(cin, p.store);
+    // cout << "Where can you buy this product: ";
+    // cin.ignore();
+    // getline(cin, p.store);
 
-    cout << "How much does this product cost: ";
-    cin >> p.price;
+    // cout << "How much does this product cost: ";
+    // cin >> p.price;
 }
 
 //main 
@@ -59,9 +61,10 @@ int main ()
     {
         cout << "What would you like to do?" << endl;
         cout << "1. Enter in a new product" << endl;
-        cout << "2. Review a product" << endl;
-        cout << "3. View current Skincare routing" << endl;
-        cout << "4. Exit" << endl;
+        cout << "2. View all products" << endl;
+        cout << "3. Review a product" << endl;
+        cout << "4. View current Skincare routing" << endl;
+        cout << "5. Exit" << endl;
         cout << "Enter your selection: ";
         cin >> choice;
 
@@ -78,6 +81,12 @@ int main ()
         {
             case 1:
                 newProduct();
+
+                
+                linkedList *list = new linkedList();
+                list->addProduct();
+                
+
 
                 break;
             
