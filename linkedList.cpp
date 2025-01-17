@@ -85,3 +85,30 @@ void linkedList::printList() {
         temp = temp->next;
     }
 }
+
+/*
+    Function to remove a product from the linked list
+*/
+linkedList::Product linkedList::removeProduct(Product p) {
+    node* temp = head;
+    node* prev = NULL;
+
+    while (temp != NULL) {
+        if (temp->data.brand == p.brand && temp->data.type == p.type && temp->data.use == p.use && temp->data.store == p.store && temp->data.price == p.price) {
+            if (prev == NULL) {
+                head = temp->next;
+            } else {
+                prev->next = temp->next;
+            }
+
+            delete temp;
+            return p;
+        }
+
+        prev = temp;
+        temp = temp->next;
+    }
+
+    cout << "Product not found" << endl;
+    return p;
+}

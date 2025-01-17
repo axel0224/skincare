@@ -63,7 +63,7 @@ int main ()
         cout << "What would you like to do?" << endl;
         cout << "1. Enter in a new product" << endl;
         cout << "2. View all products" << endl;
-        cout << "3. Review a product" << endl;
+        cout << "3. Delete a product" << endl;
         cout << "4. View current Skincare routine" << endl;
         cout << "5. Exit" << endl;
         cout << "Enter your selection: ";
@@ -91,7 +91,7 @@ int main ()
                 break;
 
             case 3:
-                cout << "choice 3";
+                //list->removeProduct(list);
 
                 break;
 

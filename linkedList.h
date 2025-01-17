@@ -28,7 +28,6 @@ class linkedList {
         void printList();
         Product removeProduct(Product p);
         
-
         ~linkedList();
 };
 
